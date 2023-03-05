@@ -1,0 +1,7 @@
+{
+  "name": "angul-ai-talks",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

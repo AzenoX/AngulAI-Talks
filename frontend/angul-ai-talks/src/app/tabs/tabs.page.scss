@@ -1,0 +1,15 @@
+.bottom-bar {
+  display: flex;
+  justify-content: space-between;
+
+  &--input {
+    flex: 10;
+  }
+
+  &--button {
+    flex: 1;
+    margin-top: 0;
+    padding-top: 0;
+    height: 100%;
+  }
+}

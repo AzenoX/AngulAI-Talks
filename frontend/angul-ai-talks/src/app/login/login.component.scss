@@ -1,0 +1,27 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 90vh;
+}
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+}
+
+form {
+  width: 80vw;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.error {
+  text-align: center;
+  color: red;
+}
+
+a {
+  margin-top: 1vh;
+}

@@ -1,0 +1,4 @@
+<ion-app>
+  <app-login (isLoggedIn)="isLoggedIn = $event" *ngIf="!isLoggedIn"></app-login>
+  <ion-router-outlet *ngIf="isLoggedIn"></ion-router-outlet>
+</ion-app>

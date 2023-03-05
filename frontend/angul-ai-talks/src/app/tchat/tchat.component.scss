@@ -1,0 +1,47 @@
+.tchat-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-height: 87vh;
+  overflow: auto;
+
+  .tchat-item {
+    width: fit-content;
+    padding: 0.2em 1em;
+    margin: 1em;
+    max-width: 80vw;
+
+    p:first-child {
+      font-weight: bold;
+    }
+
+    &.from-self {
+      background: var(--ion-color-primary);
+      align-self: flex-end;
+    }
+
+    &.from-other {
+      background: var(--ion-color-secondary);
+      align-self: flex-start;
+    }
+  }
+}
+
+.bottom-bar {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+
+  &--input {
+    flex: 10;
+  }
+
+  &--button {
+    flex: 1;
+    margin: 0;
+    height: auto;
+  }
+}
+

@@ -1,0 +1,71 @@
+<div class="wrapper" *ngIf="isLogin">
+  <h1>Login</h1>
+  <br>
+  <form>
+    <ion-item>
+      <ion-input
+        placeholder="Username"
+        type="text"
+        (input)="updateField($event, 'login_username')"
+      >
+      </ion-input>
+    </ion-item>
+
+    <br>
+
+    <ion-item>
+      <ion-input
+        placeholder="Password"
+        type="password"
+        (input)="updateField($event, 'login_password')"
+      >
+      </ion-input>
+    </ion-item>
+
+    <br>
+
+    <ion-button expand="full" size="large" (click)="login()" [disabled]="loginError">
+      Login
+      <ion-icon slot="end" name="send"></ion-icon>
+    </ion-button>
+
+    <p class="error" *ngIf="loginError">{{ loginError }}</p>
+  </form>
+  <a (click)="toSwitch()">Register instead ?</a>
+</div>
+
+<div class="wrapper" *ngIf="!isLogin">
+  <h1>Register</h1>
+  <br>
+  <form>
+    <ion-item>
+      <ion-input
+        placeholder="Username"
+        type="text"
+        (input)="updateField($event, 'register_username')"
+      >
+      </ion-input>
+    </ion-item>
+
+    <br>
+
+    <ion-item>
+      <ion-input
+        placeholder="Password"
+        type="password"
+        (input)="updateField($event, 'register_password')"
+      >
+      </ion-input>
+    </ion-item>
+
+    <br>
+
+    <ion-button expand="full" size="large" (click)="register()" [disabled]="registerError">
+      Register
+      <ion-icon slot="end" name="send"></ion-icon>
+    </ion-button>
+
+    <p class="error" *ngIf="registerError">{{ registerError }}</p>
+  </form>
+  <a (click)="toSwitch()">Already an account ?</a>
+</div>

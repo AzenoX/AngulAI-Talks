@@ -1,0 +1,27 @@
+<div class="tchat-wrapper" #tchatWrapper>
+
+  <div
+    *ngFor="let message of messageList"
+    class="tchat-item"
+    [ngClass]="{'from-other': message.user?.isBot === 1, 'from-self': message.user?.isBot === 0 || !message.user}"
+  >
+    <p>{{message.user?.name || userName}}</p>
+    <p>{{message.message}}</p>
+  </div>
+
+</div>
+
+<div class="bottom-bar">
+  <ion-item class="bottom-bar--input">
+    <ion-input
+      placeholder="Message"
+      type="text"
+      [value]="message"
+      (input)="setMessage($event)">
+    </ion-input>
+  </ion-item>
+
+  <ion-button class="bottom-bar--button" expand="full" size="large" (click)="submitMessage()">
+    <ion-icon name="send"></ion-icon>
+  </ion-button>
+</div>
